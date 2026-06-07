@@ -109,62 +109,7 @@
 
 ## 1.7 유스케이스
 
-```mermaid
-flowchart LR
-    User["일반 사용자"]
-    Admin["관리자"]
-    MOLIT["국토교통부 API"]
-    Kakao["Kakao Map API"]
-
-    subgraph System["자취방 거래 안심리뷰 시스템"]
-        UC1(["회원가입"])
-        UC2(["로그인"])
-        UC3(["지도 매물 조회"])
-        UC4(["지역/주소 검색"])
-        UC5(["매물 상세 조회"])
-        UC6(["계약서 첨부 리뷰 등록"])
-        UC7(["마이페이지 리뷰 관리"])
-        UC8(["월세 적정성 계산"])
-
-        AC1(["관리자 로그인"])
-        AC2(["리뷰 승인/반려"])
-        AC3(["리뷰 삭제"])
-        AC4(["사용자 삭제/복구"])
-        AC5(["전국 실거래가 수집"])
-        AC6(["계약서 검증 자료 확인"])
-
-        EX1(["실거래 데이터 조회"])
-        EX2(["주소 좌표 변환"])
-        EX3(["지도 마커 표시"])
-    end
-
-    User --- UC1
-    User --- UC2
-    User --- UC3
-    User --- UC4
-    User --- UC5
-    User --- UC6
-    User --- UC7
-    User --- UC8
-
-    Admin --- AC1
-    Admin --- AC2
-    Admin --- AC3
-    Admin --- AC4
-    Admin --- AC5
-    Admin --- AC6
-
-    UC3 --> EX3
-    UC4 --> EX2
-    UC5 --> EX1
-    UC6 --> AC2
-    AC2 --> EX3
-    AC5 --> EX1
-
-    MOLIT --- EX1
-    Kakao --- EX2
-    Kakao --- EX3
-```
+<img width="882" height="423" alt="image" src="https://github.com/user-attachments/assets/aaae9127-aa86-4408-886f-13ee048f1503" />
 
 ---
 
